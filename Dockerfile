@@ -79,8 +79,7 @@ ENV ANDROID_COMPONENTS platform-tools,build-tools-26.0.0,android-25
 ENV GOOGLE_COMPONENTS extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services,extra-google-gcm
 
 RUN echo y | android update sdk --no-ui --all --filter "${ANDROID_COMPONENTS}" ; \
-    echo y | android update sdk --no-ui --all --filter "${GOOGLE_COMPONENTS}" ; \
-    yes | sdkmanager --licenses
+    echo y | android update sdk --no-ui --all --filter "${GOOGLE_COMPONENTS}"
 
 # Support Gradle
 ENV TERM dumb
