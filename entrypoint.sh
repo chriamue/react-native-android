@@ -10,5 +10,6 @@ echo "Starting with UID : $USER_ID"
 useradd --shell /bin/bash -u $USER_ID -o -c "" -m user
 export HOME=/home/user
 chown $USER_ID:$USER_ID $HOME
+yes | sdkmanager --licenses
 
 exec /usr/local/bin/gosu user "$@"
